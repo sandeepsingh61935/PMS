@@ -1,0 +1,78 @@
+
+mutation {
+  addProject (
+    name : "spiderman parody",
+    description : "creating spiderman parody directed by harry jane",
+    status : new,
+    clientId: "632f00859d754bdc09b254c1"
+  ){
+    status
+  }
+}
+
+# #add client
+# mutation {
+	
+#   addClient(
+#     name : "Harry jane",
+#     email : "dave_batista_15@gmail.com",
+#     phone:"433434343") {
+#     name,
+#     id,
+#     email,
+#     phone
+# }
+# }
+
+
+# add project
+#delete project
+# mutation {
+#   deleteProject(id : "632f31be70dr73463b373b224") {
+#     name
+#     id
+#   }
+# }
+
+
+
+
+#get all clients
+# query {
+#   clients {
+#     name
+#     id
+#   }
+# }
+
+# query {
+#   client(id : "632f38967cb4f9d1d9b43c40") {
+#     name
+#     id
+#   }
+# }
+
+# get all projects 
+#  {
+#   project(_id:"632f322070c65958d22caf47"){
+#     name
+#     _id
+#     client {
+#       name
+#       _id
+#     }
+#   }
+# }
+
+
+# {
+#   projects {
+#     _id
+#     name
+#     client {
+#       name
+#       _id
+#     }
+#   }
+# }
+

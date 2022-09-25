@@ -5,7 +5,7 @@ const ClientSchema = new mongoose.Schema({
     name: { type: String },
     email: { type: String },
     phone: { type: String },
-    id: { type: mongoose.Types.ObjectId, default: new mongoose.Types.ObjectId() }
+    _id: { type: mongoose.Types.ObjectId, default: new mongoose.Types.ObjectId() }
 });
 
 
