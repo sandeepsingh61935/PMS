@@ -31,14 +31,20 @@ export default function AddProject() {
     if (name === '' || description === '' || status === '') {
       return alert('Please fill in all fields');
     }
-
+    console.log(name,description,clientId,status);
     addProject(name, description, clientId, status);
 
+   
+  };
+
+  const resetStates = (e)=> {
+    // e.preventDefault();
     setName('');
     setDescription('');
     setStatus('new');
     setClientId('');
-  };
+    return;
+  }
 
   if (loading) return null;
   if (error) return 'Something Went Wrong';
@@ -52,6 +58,7 @@ export default function AddProject() {
             className='btn btn-primary'
             data-bs-toggle='modal'
             data-bs-target='#addProjectModal'
+            onClick={resetStates}
           >
             <div className='d-flex align-items-center'>
               <FaList className='icon' />
@@ -80,6 +87,9 @@ export default function AddProject() {
                 </div>
                 <div className='modal-body'>
                   <form onSubmit={onSubmit}>
+
+                    {/* Rendering Name */}
+
                     <div className='mb-3'>
                       <label className='form-label'>Name</label>
                       <input
@@ -90,6 +100,9 @@ export default function AddProject() {
                         onChange={(e) => setName(e.target.value)}
                       />
                     </div>
+
+                    {/* Rendering Description */}
+
                     <div className='mb-3'>
                       <label className='form-label'>Description</label>
                       <textarea
@@ -99,6 +112,9 @@ export default function AddProject() {
                         onChange={(e) => setDescription(e.target.value)}
                       ></textarea>
                     </div>
+
+                    {/* Rendering Status */}
+
                     <div className='mb-3'>
                       <label className='form-label'>Status</label>
                       <select
@@ -113,6 +129,8 @@ export default function AddProject() {
                       </select>
                     </div>
 
+
+                    {/* Rendering Client */}
                     <div className='mb-3'>
                       <label className='form-label'>Client</label>
                       <select

@@ -3,6 +3,9 @@ import Spinner from "../components/Spinner";
 import { useQuery } from "@apollo/client";
 import { GET_PROJECT } from "../queries/projectQueries";
 import ClientInfo from "../components/ClientInfo";
+import EditProject from "../components/EditProject";
+import DeleteProject from "../components/DeleteProject";
+
 export default function Project() {
   const { _id } = useParams();
   const { loading, error, data } = useQuery(GET_PROJECT, {
@@ -30,9 +33,9 @@ export default function Project() {
 
             <ClientInfo client={data.project.client} />
 
-            {/* <EditProjectForm project={data.project} /> */}
+            <EditProject project={data.project} />
 
-            {/* <DeleteProjectButton projectId={data.project._id} /> */}
+            <DeleteProject projectId={data.project._id} />
         </div>
       )}
     </>
