@@ -18,7 +18,7 @@ mutation {
 #     email : "dave_batista_15@gmail.com",
 #     phone:"433434343") {
 #     name,
-#     id,
+#     _id,
 #     email,
 #     phone
 # }
@@ -28,9 +28,9 @@ mutation {
 # add project
 #delete project
 # mutation {
-#   deleteProject(id : "632f31be70dr73463b373b224") {
+#   deleteProject(_id : "632f31be70dr73463b373b224") {
 #     name
-#     id
+#     _id
 #   }
 # }
 
@@ -41,14 +41,14 @@ mutation {
 # query {
 #   clients {
 #     name
-#     id
+#     _id
 #   }
 # }
 
 # query {
-#   client(id : "632f38967cb4f9d1d9b43c40") {
+#   client(_id : "632f38967cb4f9d1d9b43c40") {
 #     name
-#     id
+#     _id
 #   }
 # }
 
