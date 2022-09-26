@@ -39,7 +39,7 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route path='/' element = {<Home/>} errorElement = {<NotFound/>}/>
+              <Route path='/' element = {<Home/>}/>
               <Route path='*' element = {<NotFound/>}/>
               <Route path='/project/:_id' element = {<Project/>}/>
             </Routes>

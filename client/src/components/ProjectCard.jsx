@@ -6,7 +6,7 @@ export default function ProjectCard({ project }) {
             <div className='d-flex justify-content-between align-items-center'>
               <h5 className='card-title'>{project.name}</h5>
   
-              <a className='btn btn-light' href={`/projects/${project._id}`}>
+              <a className='btn btn-light' href={`/project/${project._id}`}>
                 View
               </a>
             </div>
